@@ -1,0 +1,26 @@
+{
+  "name": "practica1_g10",
+  "version": "1.0.0",
+  "description": "El presente proyecto hace referencia a la practica 1 del curso de Analisis y Diseno de Sistemas 1 el cual tiene como objetivo, la utilizacion de un ciclo basico mediante GITFLOW.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/Alex_4191/practica1_g10.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Alex_4191/practica1_g10/issues"
+  },
+  "homepage": "https://gitlab.com/Alex_4191/practica1_g10#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "schema-object": "^4.0.11"
+  }
+}
