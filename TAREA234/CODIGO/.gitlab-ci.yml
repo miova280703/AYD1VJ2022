@@ -1,0 +1,27 @@
+image: docker:latest
+
+services:
+  - docker:dind
+
+stages:
+  - build
+
+ConstruccionImagenes: #Construccion de imagen
+  stage: build 
+  tags:
+    - docker
+    - ayd1
+  script:
+    - docker build -t msaban1906/ayd1backend ./BACKEND
+    - docker save msaban1906/ayd1backend > ayd1backend-image.zip
+    - docker build -t msaban1906/ayd1frontend ./FRONTEND/pruebas
+    - docker save msaban1906/ayd1frontend > ayd1frontend-image.zip
+  artifacts:
+    paths:
+      - ayd1backend-image.zip
+      - ayd1frontend-image.zip
+  when: always
+  only:
+    refs:
+      - main
+  allow_failure : false
